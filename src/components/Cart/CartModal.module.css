@@ -1,0 +1,83 @@
+#modal {
+  width: 35%;
+  background: white;
+  border: none;
+  border-radius: 9px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fade-slide-in-from-top 0.3s ease-in-out;
+}
+
+#modal::backdrop {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+#modal form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 20rem;
+  overflow: auto;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.modal-actions {
+  text-align: right;
+}
+
+.modal-actions button {
+  font: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  color: #8a2b06;
+  border: 1px solid #8a2b06;
+  padding: 0.5rem 2rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+}
+
+.modal-actions button:last-of-type {
+  background-color: #8a2b06;
+  color: white;
+}
+
+.modal-actions button:hover,
+.modal-actions button:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+  color: white;
+}
+
+.modal-actions button:last-of-type:hover,
+.modal-actions button:last-of-type:active {
+  background-color: #5a1a01;
+  border-color: #5a1a01;
+}
+
+.modal-actions .button--alt {
+  color: #8a2b06;
+}
+
+@keyframes fade-slide-in-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
